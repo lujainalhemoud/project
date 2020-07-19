@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <title>الفريق</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: gray;
+      }
+      .container {
+        margin: 20px 40px;
+        color: white;
+      }
+      .heading {
+        font-size: 60px;
+        color: white;
+      }
+      .heading span {
+        font-style: italic;
+        font-size: 30px;
+      }
+      .profiles {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 80px;
+      }
+      .profile {
+        flex-basis: 260px;
+      }
+
+      .profile .profile-img {
+        height: 260px;
+        width: 260px;
+        border-radius: 50%;
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: 400ms;
+      }
+      .profile :hover profile-img {
+        filter: grayscale(0);
+      }
+
+      .user-name {
+        margin-top: 30px;
+        font-size: 35px;
+      }
+      .profile h5 {
+        font-size: 10px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        color: white;
+      }
+      .profile p {
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: justify;
+      }
+
+      @media only screen and (max-width: 1150px) {
+        .profiles {
+          flex-direction: column;
+        }
+        .profile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .profile p {
+          text-align: center;
+          margin: 20px 60px 80px 60px;
+          font-size: 20px;
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        .heading {
+          font-size: 40px;
+          color: white;
+          text-align: center;
+        }
+        .heading span {
+          font-size: 15px;
+        }
+        .profiles {
+          margin: 20px 0;
+        }
+        .profile p {
+          margin: 20px 10px 80px 10px;
+        }
+      }
+
+      .w span {
+        font-style: italic;
+        font-size: 30px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="w" class="heading"><span>قابلوا</span>فريقي</h1>
+      <div class="profiles">
+        <div class="profile">
+          <a href="./home.html">
+            <img src="./aseets/nancy.jpg" class="profile-img"
+          /></a>
+          <h3 class="user-name">نانسي الشرقاوي</h3>
+          <h5>متميزة بالجافاسكربت</h5>
+          <p>
+            نانسي من اذكى الشخصيات وهي دائما متميزة ومبدعة وخصوصا في الجافا
+            سكربت وتعطي كل شي عندها وتساعد وتحاتي على طلبتها
+          </p>
+        </div>
+      </div>
+
+      <div class="profiles">
+        <div class="profile">
+          <img src="./aseets/moudi.jpg" class="profile-img" />
+          <h3 class="user-name">موضي البناي</h3>
+          <h5>متميزة بالكاهوت</h5>
+          <p>
+            موضي من اقوى الشخصيات واقوى استاذة تعطي عقاب لكن دايما ماننسى
+            كلماتها التشجيعيةتعطينا قوة
+          </p>
+        </div>
+      </div>
+
+      <div class="profiles">
+        <div class="profile">
+          <img src="./aseets/manawer.jpg" class="profile-img" />
+          <h3 class="user-name">مناور العازمي</h3>
+          <h5>متميز انه عنده اقوى فرقة مطبلين</h5>
+          <p>
+            مناور دايما يحاول يساعدنا ويفهمنا بكل الطرق علشان يسهل علينا فهم
+            البرمجة واهم من كل هذا عزفه عجيب
+          </p>
+        </div>
+      </div>
+
+      <div class="profiles">
+        <div class="profile">
+          <img src="./aseets/rahaf.jpg" class="profile-img" />
+          <h3 class="user-name">رهف العنزي</h3>
+          <h5>متميزة بوجودها بزووم وتحاتي طلبتها</h5>
+          <p>
+            رهف من الشخصيات الحنونة اللي دايما تخاف على مشاعر طلبتها وماننسى
+            مهمتها في تسجيل الكلاس علشان نراجع
+          </p>
+        </div>
+      </div>
+
+      <div class="profiles">
+        <div class="profile">
+          <img src="./aseets/hussain.jpg" width="200px" class="profile-img" />
+          <h3 class="user-name">حسين الموسوي</h3>
+          <h5>متميز بهدوئه</h5>
+          <p>
+            حسين من الشخصيات اللي باله طويل ودايما ياخذ الامور ببساطة
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

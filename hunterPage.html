@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html >
+   
+    <title>الصيد البري</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./aseets/style.css" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .cart-items{
+        cursor: pointer;
+      }
+      button:focus{
+    outline: none;
+      }
+      .product-img{
+        display: block;
+        margin: auto;
+      }
+      .bag-btn{
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .bag-btn:focus{
+      outline: none;
+
+      }
+      .nav-link{
+       background: url(cart.png) no-repeat 0 0;
+      }
+      .cart-items{
+        position: absolute;
+      }
+      .cart-items a{
+        border: 2px;
+      }
+      .hh2{
+        font-family: monospace;
+     animation:typing-text 10s steps(24),  blink 0.5s infinite alternate;
+     overflow: hidden;
+     white-space: nowrap;
+     border-right: 3px solid #000;
+      }
+      @keyframes typing-text{
+        from {
+       width: 0;
+        }
+        to{
+     width:400px ;
+        }
+      }
+      @keyframes blink{
+        from{
+          border-color: transparent;
+        }
+        to{
+          border-color: #000;
+        }
+      }
+
+      #o{
+        color: thistle;
+        
+      }
+
+      
+
+    .rat{
+      width: 60%;
+      max-width: 200px;
+      justify-content: center;
+      margin:  auto;
+      padding-left:45px;
+      background: lightgray;
+      color: grey;
+      border-radius: 5px;
+      border: 2px solid #444;
+      overflow: hidden;
+      margin-top: 25px;
+     
+    }
+    .popo{
+      color: white;
+      padding-top: 10px;
+     padding-right: 15px;
+    }
+
+    div.stars{
+      width: 270px;
+      display: inline-block;
+    }
+
+    input .star{
+      display: none;
+    }
+    
+
+    /* label .star{
+      float: right;
+      padding: 10px;
+      font-size: 36px;
+      color: lightgray;
+      margin: auto;
+    }
+      */
+      #w{
+        margin-top:43px;
+      }
+      .h33{
+        text-decoration: none;
+        color: black;
+      }
+   
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+</head>
+
+
+<body class="huntbody">
+  <script>
+    var swiper = new swiper(".swiper-container",{
+      sliderPerView:3,
+      spaceBetween:30,
+      pagination:{
+        el:".swiper-pagination",
+        clickable:true,
+      },
+    })
+
+   
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/j"></script>
+    <!-- ----navigation -->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"
+            ><img src="./aseets/logo2.jpg" width="100px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+             
+              <li class="nav-item dropdown">
+                <a id="o"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  للتواصل
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a class="dropdown-item" href="#">95723851</a>
+                  <a class="dropdown-item" href="#">93006542</a>
+                  <a class="dropdown-item" href="#">99431730</a>
+                </div>
+              </li>
+              <div class="cart-btn">
+                  <span class="nav-icon">
+                    
+                      <i class="nav-link" id="o"  >عربة التسوق</i>
+                  </span>
+                  <div class="cart-items" id="o">0</div>
+              </div>
+  
+             
+              <li class="nav-item active">
+                <a class="nav-link" href="./home.html" id="o"> الصفحة الرئيسية</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <!---------- البداية للضغط-------- -->
+      <header class="hero">
+          <div class="banner">
+              <h1 class="banner-title">ادوات الصيد البري</h1>
+              <button class="banner-btn" id="banner-btn ">اشتر الان</button>
+          </div>
+      </header>
+      <!-- --------------------------المنتجات-------------------- -->
+      <section class="products">
+        <div class="section-title">
+          <h2 class="hh2">منتجاتنا</h2>
+        </div>
+        <div class="products-center">
+          <!-- ---المنتج الواحد -->
+          <article class="product">
+            <div class="img-container">
+              <img src="./aseets/img/huntpic1.jpg" class="product-img">
+            <button class="bag-btn" data-id="1">
+              <i  class="cart-items"></i>
+             اضف الى السلة
+            </button>
+            </div>
+            <h3>عدسة</h3>
+            <div class="rat">
+              <p class="popo">تقييمك للمنتج</p>
+              <div class="stars">
+                <form action="">
+                  <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                  <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+         <br>
+                  <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                  <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                  <br>       
+                  <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                  <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                  <br>    
+                  <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                  <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                  
+
+                </form>
+              </div>
+              </div>
+            <a href="./home.html" class="hunthref"> <h4>$167.97</h4></a>
+          </article>
+        
+<!-- ---------الصورة الثانية -->
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic2.jpg" class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            اضف الى السلة
+          </button>
+          </div>
+          <h3>الليزر الاحمر الاشعاعي</h3>
+          <div class="rat">
+            <p class="popo">تقييمك للمنتج</p>
+            <div class="stars">
+              <form action="">
+                <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+       <br>
+                <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                <br>       
+                <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                <br>    
+                <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                
+
+              </form>
+            </div>
+            </div>
+          <a href="./home.html" class="hunthref"> <h4>$130.42</h4></a>
+        </article>
+
+<!-- ---------الصورة الثالثة -->
+
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic3.jpg" class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            اضف الى السلة
+          </button>
+          </div>
+          <h3>عدسة للرؤية الليلية</h3>
+          <div class="rat">
+            <p class="popo">تقييمك للمنتج</p>
+            <div class="stars">
+              <form action="">
+                <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+       <br>
+                <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                <br>       
+                <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                <br>    
+                <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                
+
+              </form>
+            </div>
+          </div>
+          <a href="./home.html" class="hunthref"> <h4>$155.12</h4></a>
+        </article>
+        <!-- --الصورة الثالثة---
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic3.jpg" class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            add to bag
+          </button>
+          </div>
+          <h3>عدسة قوية التحكم للرؤية الدقيقة</h3>
+          <h4>$900.87</h4>
+        </article> -->
+        <!-- ---الصورة الرابعة-- -->
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic4.webp" class="product-img">
+          <button class="bag-btn" data-id="1">  
+           
+            <i  class="cart-items"  < a href="#"></i>
+            اضف الى السلة
+          </a>
+          </button>
+          </div>
+          <a  href="./infoProductHunt.html"  class="aa">
+          <h3 class="h33">  الحقيبة الظهرية قوية التحمل</h3></a>
+          <div class="rat">
+            <p class="popo">تقييمك للمنتج</p>
+            <div class="stars">
+              <form action="">
+                <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+       <br>
+                <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                <br>       
+                <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                <br>    
+                <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                
+
+              </form>
+            </div>
+            </div>
+          <a href="./infoProductHunt.html" class="hunthref"> <h4>$300.45</h4></a>
+        </article>
+        <!-- -----الصورة الخامسة -->
+       
+        
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic5.webp"  class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            اضف الى السلة
+          </button>
+          </div>
+          <h3>عدسة لرؤية الطيور والصقور بدقة عالية</h3>
+          <div class="rat">
+            <p class="popo">تقييمك للمنتج</p>
+            <div class="stars">
+              <form action="">
+                <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+       <br>
+                <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                <br>       
+                <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                <br>    
+                <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                
+
+              </form>
+            </div>
+            </div>
+          <a href="./home.html" class="hunthref"> <h4>$745.55</h4></a>
+        </article>
+        <!-- ---الصورة السادسة -->
+        <article class="product">
+          <div class="img-container">
+            <br>
+            <img src="./aseets/img/huntpic6.webp" class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            اضف الى السلة
+          </button>
+          </div>
+         
+          <br>
+         <br>
+          <h3>رصاصات للقناص</h3>
+          
+         
+            <div class="rat" id="w">
+              <p class="popo">تقييمك للمنتج</p>
+              <div class="stars">
+                <form action="">
+                  <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                  <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+         <br>
+                  <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                  <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                  <br>       
+                  <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                  <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                  <br>    
+                  <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                  <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                  
+
+                </form>
+              </div>
+            </div>
+              <a href="./home.html" class="hunthref"><h4>$4.29 </h4></a> 
+        </article>
+        <!-- ---الصورة السابعة -->
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic7.webp" class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            اضف الى السلة
+          </button>
+          </div>
+         
+          <h3> ليزر للاحتياجات المهمة للصيد</h3>
+          <br>
+         
+          <div class="rat">
+            <p class="popo">تقييمك للمنتج</p>
+            <div class="stars">
+              <form action="">
+                <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+       <br>
+                <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                <br>       
+                <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                <br>    
+                <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                
+
+              </form>
+            </div>
+            </div>  
+         <a href="./home.html" class="hunthref"><h4>$10.26 </h4></a> 
+        
+        </article>
+        <!----- الصورة الثامنة------- -->
+        <article class="product">
+          <div class="img-container">
+            <img src="./aseets/img/huntpic8.webp" class="product-img">
+          <button class="bag-btn" data-id="1">
+            <i  class="cart-items"></i>
+            اضف الى السلة
+          </button>
+          </div>
+          
+          <h3>  قفازات للصيد </h3>
+          <br>
+          <div class="rat">
+            <p class="popo">تقييمك للمنتج</p>
+            <div class="stars">
+              <form action="">
+                <input type="radio" class="star star-5" class="ss" id="star-5" name="star">
+                <label for="star-5" class="star star-5" class="ss" id="star-5">ممتاز</label>
+       <br>
+                <input type="radio" class="star star-4"class="ss" id="star-4" name="star">
+                <label for="star-4" class="star star-4" class="ss"id="star-4">جيد حدا</label>
+
+                <br>       
+                <input type="radio" class="star star-3"class="ss" id="star-3" name="star">
+                <label for="star-3" class="star star-3"class="ss" id="star-3">جيد</label>
+
+                <br>    
+                <input type="radio" class="star star-2"class="ss" id="star-2" name="star">
+                <label for="star-2" class="star star-2"class="ss" id="star-2"> مقبول</label>
+
+                
+
+              </form>
+            </div>
+            </div>
+          <a href="./home.html" class="hunthref"><h4>$40.30</h4></a>
+        </article>
+      </section>
+    </div>
+    <!--------- ----the cart------- -->
+    <div class="cart-overlay">
+      <div class="cart">
+        <span class="close-cart">
+          <i class="fas fa-windo-close"></i>
+        </span>
+        <h2>عربتك التسوق</h2>
+        <div class="cart-content">
+          <!-- ----------cart item------------- -->
+          <div class="cart-item">
+            <img src="./aseets/img/huntpic1.jpg">
+            <div>
+              <h4>العدسة</h4>
+              <h5>$167.97</h5>
+              <span class="remove-item">ازالة العنصر</span>
+            </div>
+            <div >
+              <i class="fas fa-chevron-up"></i>
+              <p class="item-amount">1</p>
+              <i class="fas fa-chevron-down"></i>
+
+            </div>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <h3>$:مجموع الدفع <span class="cart-total">0</span></h3>
+          <button class="clear-cart banner-btn">اتمام العملية</button>
+        </div>
+      </div>
+    </div>
+      <script src="./aseets/script.js"></script>
+    
+</body>
+ <!-- ---------------------------foooteeer-------------------------------------- -->
+ <div  class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h1 id="change" class="logo-text"><span>شغف <word-spacing: 30px;></word-spacing:></span>للصيد</h1>
+        <p>
+       في هذا الموقع نحب ان نلهم الناس في زيارة
+       <br>موقع بر بحر لحتى يرى كل ما نقدمه من الادوات 
+       <br>التي قد يحتاجها وقد يريد من ان يستعملها
+        </p>
+        <div class="contact">
+          <span><i class="fas fa-phone"></i> &nbsp;965-94534073</span>
+          <span><i class="fas fa-envelope"></i>   &nbsp;info@brbaharinspire.com</span>
+
+        </div>
+        
+        <br>
+        <div  id="roww" class="socials" >
+          <li><a href="#"><i  class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+
+
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2 id="change">روابط سريعة</h2>
+        <br>
+        <ul >
+          <a class="ull" href="./Hadath.html"><li>حدث</li></a>
+          <a class="ull" href="./team.html"><li>فريق</li></a>
+          <a class="ull" href="./mentor.html"><li>المرشدين</li></a>
+         
+          <a  class="ull" href="./ahkam.html"><li>احكام وشروط</li></a>
+
+        </ul>
+      </div>
+      <div class="footer-section contact-form">
+        <h2 id="change">تواصل معنا</h2>
+        <br>
+        <form action="./home.html" metthod="post">
+          <input id="do" type="email" name="email"  class="text-input contact-input" placeholder="your email address...">
+          <textarea id="do" name="message"  class="text-input contact-input"  placeholder="your message..."></textarea>
+          <br>
+          <button id="dosub" type="submit" class="btn btn-big">
+            <i  class="fas fa-envelop"></i>
+            send</button>
+        </form>
+      </div>
+
+          </div>
+
+    <div class="footer-bottom">
+      &copy; lujainalhemoud.com | Designe by lujain alhemoud
+    </div>
+
+  </div>
+</html>

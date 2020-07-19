@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <title>معلومات عن المنتج</title>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700&display=swap"
+    rel"stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(45deg, gray, lightgray);
+      }
+      .shoe,
+      .logo {
+        display: none;
+      }
+
+      .share {
+        position: absolute;
+        text-decoration: none;
+        color: rgba(141, 136, 141, 0.795);
+        padding-right: 360px;
+        padding-bottom: 100px;
+      }
+      .shoe {
+        /* position: absolute; */
+        width: 140%;
+        opacity: 0;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+      .shoeBackground {
+        width: 50%;
+        height: 475px;
+        box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+          -15px 0 35px rgba(0, 0, 0, 0.1), -15px 0 35px rgba(0, 0, 0, 0.1);
+        margin-left: 150px;
+        margin-bottom: 100px;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 860px;
+      }
+
+      .gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        z-index: -2;
+      }
+
+      .gradient[color="green"] {
+        background-image: linear-gradient(45deg, green, lightgreen);
+      }
+      .gradient[color="black"] {
+        background-image: linear-gradient(45deg, black, rgb(22, 21, 21));
+      }
+      .gradient[color="sand"] {
+        background-image: linear-gradient(
+          45deg,
+          rgb(165, 108, 42),
+          rgb(190, 114, 42)
+        );
+      }
+      .gradient[color="white"] {
+        background-image: linear-gradient(45deg, snow, white);
+      }
+      .gradient[color="gray"] {
+        background-image: linear-gradient(45deg, gray, lightgray);
+        width: 100%;
+      }
+      .first {
+        z-index: 0;
+        animation: 1s ease;
+      }
+
+      @keyframes width {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      .shoeName {
+        padding: 0 0 10px 0;
+      }
+      .shoeName div {
+        display: flex;
+        align-items: center;
+      }
+      .shoeName div .big {
+        margin-right: 10px;
+        font-size: 2rem;
+        color: #333;
+      }
+
+      .shoeName div .new {
+        background-color: var(--primary);
+        text-transform: uppercase;
+        color: #efefef;
+        padding: 3px 10px;
+        border-radius: 5px;
+      }
+      .shoeName .small {
+        font-weight: 500;
+        color: #444;
+        margin-top: 3px;
+        text-transform: capitalize;
+      }
+      .shoeName .description,
+      .color-container,
+      .size-container {
+        border-bottom: 1px solid #dadada;
+      }
+      .description {
+        padding: 10px 0;
+      }
+      .p {
+        color: antiquewhite;
+      }
+      .nike {
+        color: #007bff;
+      }
+
+      .title {
+        color: #3a3a3a;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+      .text {
+        text-decoration-style: initial;
+        color: honeydew;
+        counter-reset: #555;
+        font-size: 17px;
+      }
+      .color-container {
+        padding: 10px 0;
+      }
+      .colors {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .color {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin: 0 10px;
+        border: 5px solid;
+      }
+      .color[color="green"] {
+        background-color: green;
+        border-color: green;
+      }
+      .color[color="black"] {
+        background-color: black;
+        border-color: black;
+      }
+      .color[color="sand"] {
+        background-color: sandybrown;
+        border-color: sandybrown;
+      }
+      .color[color="white"] {
+        background-color: white;
+        border-color: white;
+      }
+      .color[color="gray"] {
+        background-color: gray;
+        border-color: gray;
+      }
+      .color.active {
+        border-color: #fff;
+        box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+      }
+      .size-container {
+        padding: 10px 0;
+        margin-bottom: 10px;
+      }
+      .sizes {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+      }
+      .size {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: white;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .no .size .active {
+        background-color: var(--primary);
+        color: white;
+      }
+      .buy-price {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .price {
+        color: #333;
+        display: flex;
+        align-items: center;
+      }
+      .price h1 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+      .price i {
+        font-size: 1.4rem;
+        margin-right: 1px;
+      }
+      .buy {
+        padding: 0.7rem 1rem;
+        background-color: var(--primary);
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: 0.5s;
+      }
+      .buy:hover {
+        transform: scale(1.1);
+      }
+      .buy {
+        margin-right: 2px;
+      }
+      .photo {
+        margin-top: 40px;
+        margin-right: 50px;
+      }
+      .choose {
+        color: white;
+        background-color: darkgrey;
+        border: 2px solid darkgrey;
+        border-radius: 4px;
+        display: block;
+        font-size: 19px;
+        padding: 10px;
+        width: 80%;
+        margin-right: 100px;
+      }
+      .hhref {
+        text-decoration: none;
+      }
+      .fas fa-shopping-cart {
+        display: inline-block;
+        background: url(cart.png) no-repeat 0 0;
+        width: 27px;
+        height: 27px;
+        margin: 0 10px 0 0;
+      }
+      .info {
+        width: 50%;
+        animation-name: white-to-orange;
+        animation-duration:3s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-direction: alternate-reverse;
+      }
+      @keyframes white-to-orange {
+        0% {
+          background: lightgray;
+          transform: translate(0px,0px);
+      }
+      50% {
+        background: gray;
+        transform: translate(10px,10px);
+      }
+      100% {
+        background:lightslategray;
+        transform: translate(20px,20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="shoeBackground">
+          <div class="gradientss">
+            <div class="gradient" color="green"></div>
+            <div class="gradient" color="black"></div>
+            <div class="gradient" color="sand"></div>
+            <div class="gradient" color="white"></div>
+            <div class="gradient" color="gray"></div>
+          </div>
+
+          <h1 class="nike">الحقيبة</h1>
+          <img src="./aseets/logo.jpg" class="logo" />
+          <a href="#" class="share"><i class="fas fa-share-alt"></i></a>
+          <a href="./hunterPage.html">
+            <img
+              class="photo"
+              src="./aseets/img/miltryiuiu.png"
+              width="330px"
+            />
+          </a>
+          <img
+            src="./aseets/img/huntpic4.webp"
+            class="shoe show"
+            color="green"
+          />
+          <img src="./aseets/img/bagblack.jpg" class="shoe" color="black" />
+          <img src="./aseets/img/bagsand.jpg" class="shoe" color="sand" />
+          <img src="./aseets/img/whitebag.jpg" class="shoe" color="white" />
+          <img src="./aseets/img/baggray.jpg" class="shoe" color="gray" />
+        </div>
+        <div class="info">
+          <div class="shoeName">
+            <div>
+              <h1 class="big">KD بسعر $300.45</h1>
+              <span class="new">الجديد</span>
+            </div>
+            <h3 class="small">حقيبة للصيد البري</h3>
+          </div>
+          <div class="description">
+            <h3 class="title">معلومات المنتج</h3>
+            <p class="text">
+              حقائب الظهر الكبيرة,المستخدمة لحمل الاحمال التي تزيد عن 10 <br />
+              (90%من وزنها) كيلوجرامات,بالاضافة عادة ما تفرغ الجزء الاكبر حتى
+              حوالي <br />
+              على الورك المبطن الاحزمة, تاركا احزمة الكتف بشكل رئيسي لتثبيت
+              الحمل
+              <br />وهذا يحسن القدرة على حمل الاحمال الثقيلة, لان الوركين اقوى
+              من الكتفين <br />ويزيد ايضا من خفة الحركة والتوازن , لان ركوب
+              الحمل يقترب من مركز كتلة مرتديها
+            </p>
+          </div>
+          <div class="color-containet">
+            <h3 class="title">الالوان</h3>
+            <div class="colors">
+              <span class="color active" primary=" #green" color="green"></span>
+              <span class="color active" primary=" #black" color="black"></span>
+              <span
+                class="color active"
+                primary=" #sandbrown"
+                color="sand"
+              ></span>
+              <span class="color active" primary=" #white" color="white"></span>
+              <span class="color active" primary=" #gray" color="gray"></span>
+            </div>
+          </div>
+          <div class="size-container">
+            <h3 class="title">المقاسات</h3>
+            <div class="sizes">
+              <span class="size">60</span>
+              <span class="size">63</span>
+              <span class="size">65</span>
+              <span class="size">67</span>
+              <span class="size">70</span>
+            </div>
+          </div>
+          <div class="buy-price">
+            <a href="#" class="buy"
+              ><i class="fas fa-shopping-cart">اضف الى السلة </i></a
+            >
+
+            <div class="price">
+              <i class="fas fa-dollar-sign"></i>
+              <h1>$300.45</h1>
+            </div>
+          </div>
+          <br />
+          <a href="./inputPage.html" class="hhref">
+            <button class="choose">للدفع</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/j"></script>
+
+    <script src="./aseets/script.js"></script>
+  </body>
+</html>

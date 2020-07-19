@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <title>معلومات عنا</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+       .img-wrap {
+         width: 100%;
+       }
+       img-wrap img {
+         width: 100%;
+         padding: 10px;
+       }
+       body {
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+       }
+       .imo {
+         border-radius: 50%;
+         box-shadow: 0 0 15px #999999;
+       }
+       #aboutus h2 {
+         margin-bottom: 25px;
+       }
+       h2 {
+         text-align: center;
+         color: gray;
+       }
+       .hh{
+         font-size: 19px;
+         color: gray;
+         text-align: center;
+       }
+       .info {
+
+         animation-name: white-to-orange;
+         animation-duration:3s;
+         animation-timing-function: linear;
+         animation-delay: 2s;
+         animation-direction: alternate-reverse;
+       }
+       @keyframes white-to-orange {
+         0% {
+           background: lightgray;
+           transform: translate(0px,0px);
+       }
+       50% {
+         background: gray;
+         transform: translate(10px,10px);
+       }
+      75% {
+         background:lightgray;
+         transform: translate(15px,15px);
+       }
+       100% {
+         background:white;
+         transform: translate(20px,20px);
+       }
+    </style>
+  </head>
+  <body>
+    <section id="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7">
+            <h2>لجين عبدالله الحمود</h2>
+            <p class="info">
+              نحن نحب ان نقدم في هذا الموقع ادوات الصيد البرية والبحرية بسبب عدم
+              وجود مواقع باللغة العربية لتوصيل الادوات ولان لايوجد في الكويت مثل
+              هذه الخاصية وانا طالبة بعمر 16 سنه من طلبة الكويت تبرمج فكرت في
+              هذه المشكلة واريد ان احل هذة المشكلة بواسطة عمل موقع يساعد فيها
+              الاشخاص الذين يحبون الصيد بشراء الادوات بارتياحية وثقة وضمان لاي
+              منتج يتم اصداره
+            </p>
+            <p class="info">
+              ومن مبادرة الكويت تبرمج قد تعلمت الكثير من الاشياء التي لم اكن
+              اعرفها من قبل و تعلم البرمجة قد افتح لي باب جديد في حياتي وخبرة
+              جديدة وهذا الشي قد رفع من كفائتي الخبرية والذي يميزني ويجعلني
+              قادرة على معرفة الكثير من الامور و كما تعلم عزيزي العميل ان تعلم
+              البرمجة بهذا السن قد جعلني با اتطور واقدم لكم افضل المنتجات
+              واجودها لكم وانشاءالله سوف نستمر لاجلكم
+            </p>
+            <br />
+            <br />
+            <br />
+            <h1 class="hh">بر بحر معاك وين ماتكون</h1>
+          </div>
+          <div class="col-sm-5">
+            <div class="img-wrap">
+              <a href="./home.html">
+                <img src="./aseets/me.jpg" width="500px" class="imo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

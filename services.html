@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
+    <title>خدماتنا</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .services-section{
+            background: url(./aseets/ababab.jpg) ;
+            background-size: cover;
+            padding: 60px 0;
+           
+    
+        }
+        .inner-width{
+            width: 100%;
+            max-width: 1200px;
+           margin: auto;
+           padding: 0 20px;
+           overflow: hidden;
+        }
+        .section-title {
+            text-align: center;
+            color: #ddd;
+            text-transform: uppercase;
+            font-size: 30px;
+            
+                    }
+                    .border{
+                        width: 160px;
+                        height: 2px;
+                        background: #82ccdd;
+                        margin: 40px auto;
+                    }
+                    a{
+                        text-decoration: none;
+                        
+                    }
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.service-box{
+    max-width: 34%;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    color: #ddd;
+    cursor: pointer;
+    
+}
+.service-icon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #82ccdd;
+    color: #82ccdd;
+    transform: rotate(45deg);
+    margin-bottom: 50px;
+    margin-top: 16px;
+}
+.service-icon i{
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+}
+.service-box:hover .service-icon{
+    background: #82ccdd;
+    color: #ddd;
+   
+    
+}
+.service-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border: 2px solid #82ccdd;
+    border-radius: 3px;
+}
+.service-desc{
+    font-size: 14px;
+   
+}
+@media screen and (max-width:960px) {
+    .service-box{
+        max-width: 45%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .service-box{
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .service-box{
+        max-width: 100%;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <div class="services-section">
+      <div class="inner-width">
+          <a href="./home.html">
+        <h1 class="section-title">خدماتنا</h1></a>
+        <div class="border"></div>
+        <div class="services-container">
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-android"></i>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="service-title">الصيد البري</div>
+            <div class="service-desc">
+                الادوات البرية التي نقدمها دائما جودتها عالية وتستطيع استخدامها بامان
+              نقدم لكم كل المنتجات البرية والبحرية في افضل الاسعار وبطريقة سهلة
+              وكلها نقدمها باللغة العربية
+            </div>
+           
+          </div>
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-fish"></i>
+            </div>
+            <br>
+            <br>
+            <br>
+          <div class="service-title">الصيد البحري</div>
+          <div class="service-desc">
+            الادوات البحرية التي نقدمها دائما جودتها عالية وتستطيع استخدامها بامان
+
+            نقدم لكم كل المنتجات البرية والبحرية في افضل الاسعار وبطريقة سهلة
+            وكلها نقدمها باللغة العربية
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-object-ungroup"></i>
+        </div>
+        <div class="service-title"> تحرير القسم</div>
+        <div class="service-desc">
+            هنا يتم معالجة وتحرير وتنسيق كل الامور اللازمة للموقع
+           
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <div class="service-title">  التصميم</div>
+        <div class="service-desc">
+           تم تصميم الموقع بواسطة احد من طلبة برمجة وتصميم مواقع من الكويت تبرمج
+           
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <div class="service-title">  البيانات</div>
+        <div class="service-desc">
+          تم وضع البيانات بطريقة سرية  وامان ويرتاح فيها العميل
+           
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-brush"></i>
+        </div>
+        <div class="service-title">  الموقع بشكل عام</div>
+        <div class="service-desc">
+         الموقع يساد فيه الشخص على معرفة الادوات بشكل سهل وكله باللغة العربية وبالنسبة لنا عميلنا هو المهم لنا 
+           
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

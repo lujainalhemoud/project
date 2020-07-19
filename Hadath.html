@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <title>الحدث</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: lightgrey;
+      }
+      h1 {
+        color: black;
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+      }
+      section .leftBox {
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+      section .leftBox .content {
+        color: #fff;
+        background: gray;
+        padding: 40px;
+        transition: 0.5s;
+        font-size: 25px;
+      }
+      section .leftBox .content:hover {
+        background: #007bff;
+      }
+      section .leftBox .content h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+      section .leftBox .content p {
+        margin: 10px 0 0;
+        padding: 0;
+      }
+      section .events {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background: lightgrey;
+        float: right;
+        box-sizing: border-box;
+      }
+      section .events ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        padding: 40px;
+        box-sizing: border-box;
+      }
+      section .events ul li {
+        list-style: none;
+        background: #fff;
+        box-sizing: border-box;
+        height: 200px;
+      }
+      section .events ul li .time {
+        position: relative;
+        padding: 20px;
+        background: lightgrey;
+        box-sizing: border-box;
+        width: 30%;
+        height: 100%;
+        float: left;
+        text-align: center;
+        transition: 0.5s;
+      }
+      section .events ul li .time {
+        background: #007bff;
+      }
+      section .events ul li .time h2 {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 60px;
+        line-height: 30px;
+      }
+
+      section .events ul li .time h2 span {
+        font-size: 30px;
+      }
+      .pp {
+        padding-top: 90px;
+        font-size: 19px;
+      }
+      .hh {
+        float: right;
+        font-size: 22px;
+        padding-right: 20px;
+        padding-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="leftBox">
+        <div class="content">
+          <h1>الاحداث والعروض</h1>
+          <p>
+            في موقع بر بحر سوف يقام قريبا افتتاح عن اهم العروض والتصفيات عن
+            الامور التي سوف يتم الاعلان عنها قريبا فكونوا في انتظار الاخبار
+            الاخيرة عن السلع التي سوف يتم استدراجها من الخارج لاجلكم ونحن دائما
+            نحب ان نقدم افضل مالدينا ولا تنسى عميلنا العزيز بانك انت دائما سوف
+            تستطيع رؤية اخر اخبارنا عبر هذا الموقع لاجل كل ماهو جديد
+          </p>
+        </div>
+      </div>
+      <div class="events">
+        <ul>
+          <li>
+            <div class="time">
+              <h2>19 <br /><span>يوليو</span></h2>
+            </div>
+            <div class="deatail">
+              <h3 class="hh">الاشخاص المتواجدون في الحدث</h3>
+              <p class="pp">
+                سوف يتواجد في هذا الحدث جميع الاشخاص المهتمين بصيد الذين يريدون
+                ان يقدموا للجيل الجديد المزيد من الاخبار عن كيفية الصيد وماهي
+                طرق الصيد انواعه وماهي الطرق المميزة وماهي الادوات المستخدمة
+                وخصوصا في هذا الجيل قد يحتاج لتعلم ماهي خصائص الصيد
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="time">
+              <h2>27 <br /><span>يوليو</span></h2>
+            </div>
+            <div class="deatail">
+              <h3 class="hh">ماهي البضائع</h3>
+              <p class="pp">
+                سوف يتم تجديد البضائع بصورة اسبوعية ليتم تقديم كل ماهو جديد في
+                الموقع لحتى يستمتع به العميل بكل مالديه من الامور الموجودة فيه
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="time">
+              <h2>3 <br /><span>اغسطس</span></h2>
+            </div>
+            <div class="deatail">
+              <h3 class="hh">التصويت</h3>
+              <p class="pp">
+                سوف يتم التصويت على البرنامج لنعرف ماهي مميزاته وعيوبه وهل هو
+                ينفع المستخدم ام لا وهل العميل يحتاج الى اضافات وهل يحتاج الى
+                ادوات من النوع الاخر وهنا يتم تقديم جميع تساؤلات العميل
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
